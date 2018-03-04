@@ -1,5 +1,6 @@
 body {
     margin: 0;
+  position:absolute;
     padding: 0;
     font-family: 'Quicksand', sans-serif;
     height: 100%;
@@ -182,36 +183,32 @@ nav ul li a.active:hover {
   left: 15vw;
   
 }
-#double-helix, #heat, #tree {
-  position: relative;
+#double-helix{
+  position: absolute;
   margin: 90px;
   top: 5vh;
   left:35vw;
   clear: left;
   width: 300px;
 }
-#double-helix-img {
+#heat {
   position: absolute;
-  margin: 0;
-  padding: 0;
-  top: 25vh;
-  left: 41vw;
+  margin: 90px;
+  top: 20vh;
+  left:35vw;
+  clear: left;
+  width: 300px;
 }
+ #tree {
+  position: absolute;
+  margin: 90px;
+  top: 30vh;
+  left:35vw;
+  clear: left;
+  width: 300px;
+}
+
 .a-text {
   text-decoration: none;
   color: #454545;
-}
-#heat-img {
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  top: 50vh;
-  left: 41vw;
-}
-#tree-img {
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  top: 75vh;
-  left: 44vw;
 }

@@ -13,10 +13,16 @@ $( function() {
     grid.hexs();
     grid.gen(2,2,4);
     }
-  
   });
   $("#refresh").button();
-  $("#refresh").click( function()
+  $("#refresh").click( function(){
+    grid.newc(grid.colors);
+    haspressed=true;
+    grid.init()
+    noStroke();
+    grid.hexs();
+    grid.gen(2,2,4);
+  });
   $( "#dmf" ).selectmenu({ 
   change: function(event, data) {
     var DMFtype = data.item.value;
