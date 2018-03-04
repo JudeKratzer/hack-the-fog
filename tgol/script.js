@@ -81,7 +81,7 @@ $( function() {
   $("#load").button();
   $("#load").click( function(){
     $.getJSON("/tgol/data.json", function(data) {
-      g.load(data.loads.glider);
+      g.load(data.loads.oscilators);
     });
   });
   
