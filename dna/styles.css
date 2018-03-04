@@ -18,12 +18,16 @@ nav {
     left: 0;
     width: 100%;
     height: 100px;
-    margin-bottom: 100px;
     padding: 10px 100px;
     box-sizing: border-box;
     transition: .3s;
 }
 
+nav.black {
+    background: rgba(0, 0, 0, 0.8);
+    height: 100px;
+    padding: 10px 100px;
+}
 
 
 nav .logo {
@@ -52,7 +56,7 @@ nav ul li {
 
 nav ul li a {
     line-height: 80px;
-    color: #151515;
+    color: #fff;
     padding: 12px 30px;
     text-decoration: none;
     text-transform: uppercase;
@@ -70,6 +74,10 @@ nav ul li a {
     font-size: 80px;
 }
 
+nav.black ul li a {
+    color: #fff;
+}
+
 nav ul li a:focus {
     outline: none;
 }
@@ -78,6 +86,12 @@ nav ul li a:focus {
     text-shadow: 2px 2px 3px rgba(58, 58, 58, 0.25), 2px 2px 3px rgba(58, 58, 58, 0.25);
 }
 
+nav.black ul li a:hover {
+    color: grey;
+}
+nav {
+  background-color: black;
+}
 
 nav ul li a.active:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 10px 40px 0 rgba(0,0,0,0.19);
@@ -88,9 +102,19 @@ nav ul li a.active:hover {
 }
 
 section.sec1 {
-    position:absolute;
-    margin-top:100px;
-    
+    width: 100%;
+    height: 100vh;
+    background :url();
+    background-size: cover;
+    background-position: center;
+}
+
+.sec2 {
+  left: 5vh;
+  top: 70vh;
+  margin: 0;
+  padding: 0;
+  position:absolute;
 }
 
 .content p {
@@ -107,34 +131,41 @@ section.sec1 {
   padding: 0;
   top:-1vh;
 }
-#slider {
-  width:34vw;
-  left: 33vw;
-}
-#custom-handle {
-  text-align: center;
-}
-p {
-  position: absolute; 
-  left: 13vw;
-  top: -6vh;
-}
-#reset {
-  left: 0vw;
-}
-#spinner-label {
-  font-size: 20px;
-}
-#spinner {
-  width: 40px;
-}
-#slider {
-  left: 60vw;
-  top: -3vh;
-  margin-left: 5px;
-}
-#slider label {
-  right: 25vh;
-  top: 2vh;
+#speed-spinner {
   position: absolute;
+  top: 17vh;
+  left: 3vw;
+}
+#red, #green, #blue {
+  top: 85vh;
+  left: 30vw;
+  clear: left;
+  width: 300px;
+}
+#swatch {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 88vh;
+  left: 55vw;
+  background-image: none;
+}
+#red .ui-slider-range { background: #ef2929; }
+#red .ui-slider-handle { border-color: #ef2929; }
+#green .ui-slider-range { background: #8ae234; }
+#green .ui-slider-handle { border-color: #8ae234; }
+#blue .ui-slider-range { background: #729fcf; }
+#blue .ui-slider-handle { border-color: #729fcf; }
+.black {
+  background-color: #fff;
+}
+#slider {
+  position: absolute;
+  top: 90vh;
+  left: 60vw;
+  width: 300px;
 }  
+#sumnum-button {
+  top: 83vh;
+  left: 85vw;
+}

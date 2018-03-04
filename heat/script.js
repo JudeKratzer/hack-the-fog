@@ -31,7 +31,7 @@ function setup(){
       this.speed=news;
     }
   }
-  for(var i=0;i<W*H/7000;i++){
+  for(var i=0;i<W*H/13000;i++){
     var x=new Ball(random(0,W),random(0,H),random(0,2*PI),36);
     bs.push(x)
   }
@@ -54,7 +54,7 @@ function draw(){
     bcolor=[255-(2*(72-temp)*128/72),255-((72-temp)*128/72),255]
   }
   background(bcolor[0],bcolor[1],bcolor[2]);
-  for(var i=0;i<W*H/7000;i++){
+  for(var i=0;i<W*H/16000;i++){
     bs[i].speedchange(temp/3);
     bs[i].next();
   }
@@ -90,6 +90,3 @@ $( function() {
     });
   });  
 });
-
-
-

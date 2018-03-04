@@ -1,6 +1,6 @@
 var squareWidth = 30;
 var playChecker = false;
-var speed = 2;
+var speed = 30;
 var val = 0;
 $( function() {
   $(window).on('scroll', function() {
@@ -70,9 +70,14 @@ $( function() {
       speed = ui.value;
     }
   });
+  $("#save").button();
+  $("#save").click( function(){
+    save();
+
+  });
   
 });
-
+var save;
 var fc;
 function setup(){
   fc=frameCount;
@@ -80,6 +85,9 @@ function setup(){
   createCanvas(windowWidth,windowHeight);
   W=windowWidth;
   H=windowHeight-180;
+  save=function(){
+    console.log(g.grid)
+  }
   grid = function(rows,cols,yoffset,playing){
     this.playing=playing;
     this.yoffset=yoffset;
@@ -105,6 +113,8 @@ function setup(){
           }else{
             fill(255);
           }
+          stroke(128);
+          strokeWeight(1);
           rect((this.Xint*i),(this.Yint*j)+this.yoffset,this.Xint,this.Yint);
         }
       }
@@ -202,23 +212,41 @@ function setup(){
     this.state=function(){
       return this.playing
     }
-
+    this.load=function(preset){
+      console.log(preset);
+      var newa=[]
+      var arr=concat([],preset);
+      for(var i=0;i<this.rows;i++){
+        var tb=floor((this.cols-preset.length)/2)
+        var lb=floor((this.rows-preset[0].length)/2)
+        var row=[];
+        for(var j=0;j<this.cols;j++){
+          if(0<=(i-lb)&&(i-lb)<preset.length&&(j-tb)<preset[0].length&&0<=(j-tb)){
+            console.log("hi");
+             row.push(preset[i-lb][j-tb])
+          }else{
+            row.push(false);   
+          }
+          
+        }
+          newa.push(row);
+      
+      }
+      
+      this.grid=concat([],newa);
+    }
   }
+  var lo=[[false,false],[false,false]]
   g = new grid(floor(W/squareWidth),floor(H/squareWidth),180,false);
-
+  g.load(lo);
+  g.update()
+  
 }
 var grid;
 var g;
 var W;
 var H;
 function draw(){
-  if(keyIsPressed==true&&key=='p'){
-    if(!g.playing){
-      g.play();
-    }else if(g.playing){
-      g.pause();
-    }
-  }
   if(frameCount%(floor(60/speed))==0){  // i think it's working now
     g.lifeIt(g.playing);
   }

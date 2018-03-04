@@ -63,40 +63,34 @@ nav ul li a {
     transition: .3s;
 }
 
-#body-section {
-  margin-top: 30px;
-}
 .sec1 {
-  left: 3vw;
-  top: 130vh;
-  overflow-wrap:normal;
-  width: 600px;
+  left: 5vw;
+  width: 400px;
   text-align: center;
   font-size: 18px;
   line-height: 30px;
   margin: 0;
   color: #ffffff;
   position: absolute;
-  
+  top: 60vh;
   font-family: "Quicksand", Arial;
 }
 
 .sec2 {
-  left: 50vw;
-  overflow-wrap:normal;
-  width: 700px;
+  left: 35vw;
+  width: 400px;
   text-align: center;
   font-size: 18px;
   line-height: 30px;
   margin: 0;
   color: #ffffff;
   position: absolute;
-  top: 130vh;
+  top: 60vh;
   font-family: "Quicksand", Arial;
 }
 
 .sec3 {
-  left: 9vw;
+  left: 65vw;
   width: 400px;
   text-align: center;
   font-size: 18px;
@@ -104,11 +98,11 @@ nav ul li a {
   margin: 0;
   color: #ffffff;
   position: absolute;
-  top: 160vh;
+  top: 60vh;
   font-family: "Quicksand", Arial;
 }
 .sec1-title {
-  left: 9vw;
+  left: 5vw;
   width: 400px;
   text-align: center;
   font-size: 30px;
@@ -116,11 +110,11 @@ nav ul li a {
   margin: 0;
   color: #ffffff;
   position: absolute;
-  top: 125vh;
+  top: 55vh;
   font-family: "Quicksand", Arial;
 }
 .sec2-title {
-  left: 60vw;
+  left: 35vw;
   width: 400px;
   text-align: center;
   font-size: 30px;
@@ -128,11 +122,11 @@ nav ul li a {
   margin: 0;
   color: #ffffff;
   position: absolute;
-  top: 125vh;
+  top: 55vh;
   font-family: "Quicksand", Arial;
 }
 .sec3-title {
-  left: 60vw;
+  left: 65vw;
   width: 400px;
   text-align: center;
   font-size: 30px;
@@ -140,60 +134,12 @@ nav ul li a {
   margin: 0;
   color: #ffffff;
   position: absolute;
-  top: 155vh;
-  font-family: "Quicksand", Arial;
-}
-.sec4 {
-  left: 60vw;
-  width: 400px;
-  text-align: center;
-  font-size: 18px;
-  line-height: 30px;
-  margin: 0;
-  color: #ffffff;
-  position: absolute;
-  top: 160vh;
-  font-family: "Quicksand", Arial;
-}
-.sec4-title {
-  left: 9vw;
-  width: 400px;
-  text-align: center;
-  font-size: 30px;
-  line-height: 30px;
-  margin: 0;
-  color: #ffffff;
-  position: absolute;
-  top: 155vh;
-  font-family: "Quicksand", Arial;
-}
-.sec5 {
-  left: 35vw;
-  width: 400px;
-  text-align: center;
-  font-size: 18px;
-  line-height: 30px;
-  margin: 0;
-  color: #ffffff;
-  position: absolute;
-  top: 175vh;
-  font-family: "Quicksand", Arial;
-}
-.sec5-title {
-  left: 35vw;
-  width: 400px;
-  text-align: center;
-  font-size: 30px;
-  line-height: 30px;
-  margin: 0;
-  color: #ffffff;
-  position: absolute;
-  top: 170vh;
+  top: 55vh;
   font-family: "Quicksand", Arial;
 }
 
 nav.black ul li a {
-    color: #fff;
+    color: #ffffff;
 }
 
 nav ul li a:focus {
@@ -205,7 +151,7 @@ nav ul li a:focus {
 }
 
 nav.black ul li a:hover {
-    color: grey;
+    color: #ffffff;
 }
 
 
@@ -213,7 +159,7 @@ nav ul li a.active:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 10px 40px 0 rgba(0,0,0,0.19);
     font-weight: 900;
     color: black;
-    background: #E2472F;
+    background: #ffffff;
     border-radius: 5px;
 }
 
@@ -230,4 +176,13 @@ nav ul li a.active:hover {
   margin: 0;
   padding: 0;
   top:-1vh;
+}
+#build-tree {
+  top:12vh;
+  left: 15vw;
+  
+}
+#binary-tree {
+  top: 12vh;
+  left: 15vw;
 }

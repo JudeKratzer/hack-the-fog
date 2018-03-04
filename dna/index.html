@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Heat</title>
-  <link rel="stylesheet" href="/heat/style.css">
+  <title>DNA</title>
+  <link rel="stylesheet" href="/dna/styles.css">
   <link rel="icon" href="https://cdn.glitch.com/68760e00-d50f-4e40-9afb-bf452336150c%2Flogo.png?1520111101609">
   <link rel="stylesheet" href="/jquery-ui/jquery-ui.theme.css">
   <link rel="stylesheet" href="/jquery-ui/jquery-ui.structure.css">
@@ -18,27 +18,37 @@
     crossorigin="anonymous">
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
-  <script src="/heat/script.js"></script>
+  <script src="/dna/script.js"></script>
 </head>
 <body>
   <div class="page-container">
     <div class="page-back">
-      <nav>
+      <nav class="black">
           <div class="logo"><img src="https://cdn.glitch.com/68760e00-d50f-4e40-9afb-bf452336150c%2Flogo.png?1520111101609" width="70"></div>
           <ul>
-              <li><a href="/index.html" class="hover">Home</a></li>
-              <li><a href="/tgol/index.html" class="hover">Conway's Game of Life</a></li>
-              <li><a href="/land/index.html" class="hover">Land</a></li>
-              <li><a href="/dna/index.html" class="hover">Double Helix</a></li>
-              <li><a href="/exp/index.html" class="hover">Tree</a></li>
-              <li><a href="/other/index.html" class="hover">Other Demos</a></li>
-          </ul>
+          <li><a href="/index.html" class="hover">Home</a></li>
+          <li><a href="/tgol/index.html" class="hover">Conway's Game of Life</a></li>
+          <li><a href="/land/index.html" class="hover">Land</a></li>
+          <li><a href="/dna/index.html" class="hover">Double Helix</a></li>
+          <li><a href="/exp/index.html" class="hover">Tree</a></li>
+          <li><a href="/other/index.html" class="hover">Other Demos</a></li>
+        </ul>
       </nav>
-      <div class="weather-finder">
-        <input type="text" id="zip-input" placeholder="Zip-Code or City"/>
-        <button id="zip-button">Visualize Weather</button>
-      </div>
     </div>
+    <section class="sec2">
+      <div id="slider-vertical" style="height:200px;"></div>
+      <label for="spinner">Select a Speed:</label>
+      <span id="speed-spinner">
+        <input id="spinner" name="value" placeholder="Lower is Faster"/>
+        <button id="getvalue">Set Speed</button>
+      </span>
+    </section>
   </div>
+<div id="red"></div>
+<div id="green"></div>
+<div id="blue"></div> 
+<div id="slider"></div>
+<div id="swatch" class="ui-widget-content ui-corner-all"></div>
+<button id="sumnum-button">Apply Width</button>
 </body>
 </html>
