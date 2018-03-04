@@ -16,24 +16,26 @@
     crossorigin="anonymous">
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
+  <script src="/heat/script.js"></script>
 </head>
 <body>
-  
-    <div class="page-container">
-        <div class="page-back">
-            <nav>
-                <div class="logo"><img src="https://cdn.glitch.com/68760e00-d50f-4e40-9afb-bf452336150c%2Flogo.png?1520111101609" width="70"></div>
-                <ul>
-                    <li><a class="hover" href="/index.html">Home</a></li>
-                    <li><a href="/tgol/index.html" class="hover">Conway's Game of Life</a></li>
-                    <li><a class="hover">Heat Visualization</a></li>
-                    <li><a href="#" class="hover">Even More Math</a></li>
-                    <li><a href="#" class="hover">All the Math</a></li>
-                </ul>
-
-            </nav>
-          
-        </div>
+  <div class="page-container">
+    <div class="page-back">
+      <nav>
+          <div class="logo"><img src="https://cdn.glitch.com/68760e00-d50f-4e40-9afb-bf452336150c%2Flogo.png?1520111101609" width="70"></div>
+          <ul>
+              <li><a class="hover" href="/index.html">Home</a></li>
+              <li><a href="/tgol/index.html" class="hover">Conway's Game of Life</a></li>
+              <li><a class="hover">Heat Visualization</a></li>
+              <li><a href="#" class="hover">Even More Math</a></li>
+              <li><a href="#" class="hover">All the Math</a></li>
+          </ul>
+      </nav>
+      <div class="weather-finder">
+        <input type="text" id="zip-input" placeholder="Zip-Code or City"/>
+        <button id="zip-button">Visualize Weather</button>
+      </div>
     </div>
+  </div>
 </body>
 </html>

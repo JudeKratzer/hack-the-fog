@@ -1,5 +1,7 @@
 var squareWidth = 30;
 var playChecker = false;
+var speed = 2;
+var val = 0;
 $( function() {
   $(window).on('scroll', function() {
     if($(window).scrollTop()) {
@@ -47,17 +49,34 @@ $( function() {
       $("#pause").text("Play");
       g.pause()
     }
-    
+
   });
   $("#next").button();
   $("#next").click( function(){
     g.lifeIt(true);
     g.update();
   });
+  
+  var handle = $( "#custom-handle" );
+  $( "#slider" ).slider({
+    value: 30,
+    max: 60,
+    min: 1,
+    create: function() {
+      handle.text( $( this ).slider( "value" ) );
+    },
+    slide: function( event, ui ) {
+      handle.text( ui.value );
+      speed = ui.value;
+    }
+  });
+  
 });
 
-
+var fc;
 function setup(){
+  fc=frameCount;
+  frameRate(60);
   createCanvas(windowWidth,windowHeight);
   W=windowWidth;
   H=windowHeight-180;
@@ -200,7 +219,9 @@ function draw(){
       g.pause();
     }
   }
-  g.lifeIt(g.playing);
+  if(frameCount%(floor(60/speed))==0){  // i think it's working now
+    g.lifeIt(g.playing);
+  }
   g.update();
  
   if(mouseIsPressed){

@@ -141,3 +141,14 @@ p {
 #spinner {
   width: 40px;
 }
+#slider {
+  left: 60vw;
+  top: -3vh;
+  margin-left: 5px;
+}
+#slider label {
+  right: 25vh;
+  top: 2vh;
+  position: absolute;
+}
+  
