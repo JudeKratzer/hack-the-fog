@@ -42,9 +42,9 @@ function setup(){
 
 
   }
-  var vals=[2,3,5,8,13,21,35,55]
-  for(var i=0;i<7;i++){
-    c.push(new circleC(W/2,H/2,60*i,vals[i],PI*(7-i)/400));
+  var vals=[2,3,6,12,24,48,72,144,89,144,233]
+  for(var i=0;i<8;i++){
+    c.push(new circleC(W/2,H/2,65*i,vals[i],PI*vals[8-i]/(600*i)));
   }
 
 
@@ -54,7 +54,7 @@ var c=[];
 var circleC;
 function draw(){
   background(0);
-  for(var i=0;i<7;i++){
+  for(var i=0;i<8;i++){
     c[i].next()
   }
 

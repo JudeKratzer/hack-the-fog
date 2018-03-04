@@ -57,7 +57,7 @@ nav ul li {
 
 nav ul li a {
     line-height: 80px;
-    color: #151515;
+    color: #ffffff;
     padding: 12px 30px;
     text-decoration: none;
     text-transform: uppercase;
@@ -185,30 +185,44 @@ nav ul li a.active:hover {
 }
 #double-helix{
   position: absolute;
-  margin: 90px;
-  top: 5vh;
-  left:35vw;
+  margin-bottom: 90px;
+  top: 30vh;
+  left:40vw;
   clear: left;
   width: 300px;
 }
 #heat {
   position: absolute;
-  margin: 90px;
-  top: 20vh;
-  left:35vw;
+  margin-bottom: 90px;
+  top: 50vh;
+  left:40vw;
   clear: left;
   width: 300px;
 }
  #tree {
   position: absolute;
-  margin: 90px;
-  top: 30vh;
-  left:35vw;
+  margin-bottom: 90px;
+  top: 70vh;
+  left:40vw;
   clear: left;
   width: 300px;
+}
+button {
+  top: 50vh;
+  left:50vw;
 }
 
 .a-text {
   text-decoration: none;
   color: #454545;
+}
+#obox {
+  position: absolute;
+  width:350px;
+  height:48vh;
+  background-color: rgba(113, 119, 124, 0.6);
+  z-index: 0;
+  left: 38.4vw;
+  top:28vh;
+  border-radius: 5%;
 }
