@@ -15,11 +15,13 @@ $( function() {
     }
   
   });
+  $("#refresh").button();
+  $("#refresh").click( function()
   $( "#dmf" ).selectmenu({ 
   change: function(event, data) {
     var DMFtype = data.item.value;
     console.log(typeof(DMFtype));
-    grid.newc(DMFtype);
+    grid.newp(DMFtype);
     console.log(DMFtype);
     haspressed=true;
     grid.init()
@@ -76,6 +78,8 @@ function setup(){
   //Desert forest mountain types
   var Normal=[Desert,Desert,Forest,Forest,Mountain];
   var Plain=[Green]
+  
+  var DMFs={"Normal":Normal,"Plain":Plain}
 
   
   var Hexlength=20;
@@ -391,6 +395,17 @@ function setup(){
       }
       console.log(typeof(newc))
       this.colors=newc;
+      this.should=0;
+      if(this.should==0){
+        this.clean(2,Green,Blue);
+      }
+    }
+    this.newp=function(newp){
+      if(typeof(newp=="string")){
+        newp=DMFs[newp]
+      }
+      console.log(typeof(newp))
+      this.type=newp;
       this.should=0;
       if(this.should==0){
         this.clean(2,Green,Blue);

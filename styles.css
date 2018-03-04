@@ -21,10 +21,11 @@ nav {
     padding: 10px 100px;
     box-sizing: border-box;
     transition: .3s;
+    z-index:   1;
 }
 
 nav.black {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 1);
     height: 100px;
     padding: 10px 100px;
 }
@@ -67,10 +68,10 @@ nav ul li a {
   margin-top: 30px;
 }
 .sec1 {
-  left: 3vw;
-  top: 130vh;
+  left: 5vw;
+  top: 90vh;
   overflow-wrap:normal;
-  width: 600px;
+  width: 540px;
   text-align: center;
   font-size: 18px;
   line-height: 30px;
@@ -82,21 +83,21 @@ nav ul li a {
 }
 
 .sec2 {
-  left: 50vw;
+  left: 54vw;
   overflow-wrap:normal;
-  width: 700px;
+  width: 500px;
   text-align: center;
   font-size: 18px;
   line-height: 30px;
   margin: 0;
   color: #ffffff;
   position: absolute;
-  top: 130vh;
+  top: 90vh;
   font-family: "Quicksand", Arial;
 }
 
 .sec3 {
-  left: 9vw;
+  left: 8vw;
   width: 400px;
   text-align: center;
   font-size: 18px;
@@ -104,7 +105,7 @@ nav ul li a {
   margin: 0;
   color: #ffffff;
   position: absolute;
-  top: 160vh;
+  top: 130vh;
   font-family: "Quicksand", Arial;
 }
 .sec1-title {
@@ -116,11 +117,11 @@ nav ul li a {
   margin: 0;
   color: #ffffff;
   position: absolute;
-  top: 125vh;
+  top: 80vh;
   font-family: "Quicksand", Arial;
 }
 .sec2-title {
-  left: 60vw;
+  left: 57vw;
   width: 400px;
   text-align: center;
   font-size: 30px;
@@ -128,7 +129,7 @@ nav ul li a {
   margin: 0;
   color: #ffffff;
   position: absolute;
-  top: 125vh;
+  top: 80vh;
   font-family: "Quicksand", Arial;
 }
 .sec3-title {
@@ -140,11 +141,11 @@ nav ul li a {
   margin: 0;
   color: #ffffff;
   position: absolute;
-  top: 155vh;
+  top: 125vh;
   font-family: "Quicksand", Arial;
 }
 .sec4 {
-  left: 60vw;
+  left: 59vw;
   width: 400px;
   text-align: center;
   font-size: 18px;
@@ -152,7 +153,7 @@ nav ul li a {
   margin: 0;
   color: #ffffff;
   position: absolute;
-  top: 160vh;
+  top: 130vh;
   font-family: "Quicksand", Arial;
 }
 .sec4-title {
@@ -164,7 +165,7 @@ nav ul li a {
   margin: 0;
   color: #ffffff;
   position: absolute;
-  top: 155vh;
+  top: 125vh;
   font-family: "Quicksand", Arial;
 }
 .sec5 {

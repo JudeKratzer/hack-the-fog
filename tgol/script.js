@@ -1,7 +1,10 @@
+
 var squareWidth = 30;
 var playChecker = false;
 var speed = 30;
 var val = 0;
+var printArr;
+var trees
 $( function() {
   $(window).on('scroll', function() {
     if($(window).scrollTop()) {
@@ -75,9 +78,18 @@ $( function() {
     save();
 
   });
+  $("#load").button();
+  $("#load").click( function(){
+    $.getJSON("/tgol/data.json", function(data) {
+      console.log(data.loads.test);
+      //console.log(data.loads.glider)
+      load(data.loads.glider);
+    })
+  });
   
 });
 var save;
+var load;
 var fc;
 function setup(){
   fc=frameCount;
@@ -86,9 +98,31 @@ function setup(){
   W=windowWidth;
   H=windowHeight-180;
   save=function(){
-    console.log(g.grid)
+    printArr(g.grid)
+  }
+  load=function(){
+    g.load(g.loadstr)
+  }
+  printArr=function(arr){
+    printstr='['
+    for(var r=0;r<arr.length;r++){
+      var rowstr="[";
+      for(var c=0;c<arr[0].length;c++){
+        if(c==0){
+          rowstr=rowstr+String(arr[r][c])
+        }else{
+          rowstr=String(rowstr+","+String(arr[r][c]))
+        }
+      }
+      rowstr=String(rowstr+"],")
+      printstr=(printstr+(rowstr));
+      
+    }
+    printstr=printstr+']'
+    console.log(printstr);
   }
   grid = function(rows,cols,yoffset,playing){
+    this.loadstr=[[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],[false,false,false,false,false,false,true,true,false,false,false,false,false,false,false,false,false],[false,false,false,false,false,false,true,true,false,false,false,false,false,false,false,false,false],[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],[false,false,false,false,false,true,true,true,false,false,false,false,false,false,false,false,false],[false,false,false,false,true,false,false,false,true,false,false,false,false,false,false,false,false],[false,false,false,true,false,false,false,false,false,true,false,false,false,false,false,false,false],[false,false,false,true,false,false,false,false,false,true,false,false,false,false,false,false,false],[false,false,false,false,false,false,true,false,false,false,false,false,false,false,false,false,false],[false,false,false,false,true,false,false,false,true,false,false,false,false,false,false,false,false],[false,false,false,false,false,true,true,true,false,false,false,false,false,false,false,false,false],[false,false,false,false,false,false,true,false,false,false,false,false,false,false,false,false,false],[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],[false,false,false,true,true,true,false,false,false,false,false,false,false,false,false,false,false],[false,false,false,true,true,true,false,false,false,false,false,false,false,false,false,false,false],[false,false,true,false,false,false,true,false,false,false,false,false,false,false,false,false,false],[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],[false,true,true,false,false,false,true,true,false,false,false,false,false,false,false,false,false],[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],[false,false,false,true,true,false,false,false,false,false,false,false,false,false,false,false,false],[false,false,false,true,true,false,false,false,false,false,false,false,false,false,false,false,false],[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]]
     this.playing=playing;
     this.yoffset=yoffset;
     this.rows=rows;
@@ -213,12 +247,11 @@ function setup(){
       return this.playing
     }
     this.load=function(preset){
-      console.log(preset);
-      var newa=[]
+      var newa=[];
       var arr=concat([],preset);
       for(var i=0;i<this.rows;i++){
-        var tb=floor((this.cols-preset.length)/2)
-        var lb=floor((this.rows-preset[0].length)/2)
+        var tb=floor((this.cols-preset[0].length)/2)
+        var lb=floor((this.rows-preset.length)/2)
         var row=[];
         for(var j=0;j<this.cols;j++){
           if(0<=(i-lb)&&(i-lb)<preset.length&&(j-tb)<preset[0].length&&0<=(j-tb)){
@@ -238,7 +271,7 @@ function setup(){
   }
   var lo=[[false,false],[false,false]]
   g = new grid(floor(W/squareWidth),floor(H/squareWidth),180,false);
-  g.load(lo);
+  //g.load(longstr);
   g.update()
   
 }

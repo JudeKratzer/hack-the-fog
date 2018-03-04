@@ -24,7 +24,7 @@ nav {
 }
 
 nav.black {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 1);
     height: 100px;
     padding: 10px 100px;
 }

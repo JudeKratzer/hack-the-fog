@@ -197,8 +197,21 @@ nav ul li a.active:hover {
   top: 25vh;
   left: 41vw;
 }
-#double-helix-text {
+.a-text {
   text-decoration: none;
   color: #454545;
 }
-
+#heat-img {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 50vh;
+  left: 41vw;
+}
+#tree-img {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 75vh;
+  left: 44vw;
+}
