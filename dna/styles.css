@@ -1,0 +1,171 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    height: 100%;
+
+}
+
+.wordhover {
+    opacity: 0;
+}
+
+
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding: 10px 100px;
+    box-sizing: border-box;
+    transition: .3s;
+}
+
+nav.black {
+    background: rgba(0, 0, 0, 1);
+    height: 100px;
+    padding: 10px 100px;
+}
+
+
+nav .logo {
+    padding: 22px 20px;
+    height: 80px;
+    float: left;
+    font-size: 20px;
+    transition: .3s;
+}
+
+nav.black .logo {
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    float: right;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    line-height: 80px;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+.sec1 h1 {
+    margin: 0;
+    color: #000000;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 50vh;
+    font-family: "Permanent Marker", Arial;
+    font-size: 80px;
+}
+
+nav.black ul li a {
+    color: #fff;
+}
+
+nav ul li a:focus {
+    outline: none;
+}
+
+.hover:hover {
+    text-shadow: 2px 2px 3px rgba(58, 58, 58, 0.25), 2px 2px 3px rgba(58, 58, 58, 0.25);
+}
+
+nav.black ul li a:hover {
+    color: grey;
+}
+nav {
+  background-color: black;
+}
+
+nav ul li a.active:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 10px 40px 0 rgba(0,0,0,0.19);
+    font-weight: 900;
+    color: black;
+    background: #E2472F;
+    border-radius: 5px;
+}
+
+section.sec1 {
+    width: 100%;
+    height: 100vh;
+    background :url();
+    background-size: cover;
+    background-position: center;
+}
+
+.sec2 {
+  left: 5vh;
+  top: 70vh;
+  margin: 0;
+  padding: 0;
+  position:absolute;
+}
+
+.content p {
+    width: 900px;
+    margin: 30px auto;
+    text-align: justify;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.logo {
+  position:absolute;
+  margin: 0;
+  padding: 0;
+  top:-1vh;
+}
+#speed-spinner {
+  position: absolute;
+  top: 17vh;
+  left: 3vw;
+}
+#red, #green, #blue {
+  top: 85vh;
+  left: 30vw;
+  clear: left;
+  width: 300px;
+}
+#swatch {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 88vh;
+  left: 55vw;
+  background-image: none;
+}
+#red .ui-slider-range { background: #ef2929; }
+#red .ui-slider-handle { border-color: #ef2929; }
+#green .ui-slider-range { background: #8ae234; }
+#green .ui-slider-handle { border-color: #8ae234; }
+#blue .ui-slider-range { background: #729fcf; }
+#blue .ui-slider-handle { border-color: #729fcf; }
+.black {
+  background-color: #fff;
+}
+#slider {
+  position: absolute;
+  top: 90vh;
+  left: 60vw;
+  width: 300px;
+}  
+#sumnum-button {
+  top: 83vh;
+  left: 85vw;
+}
